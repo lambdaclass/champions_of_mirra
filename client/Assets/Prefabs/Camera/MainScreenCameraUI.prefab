@@ -1931,8 +1931,6 @@ MonoBehaviour:
   playerModelContainer: {fileID: 2160659356440150380}
   playerModels:
   - {fileID: 2866215690245578517, guid: b5943a432043c4ddeb23a63ccb79d69a, type: 3}
-  - {fileID: 7907390967641451173, guid: b3ded8783b6794ef196dcb3a618c78db, type: 3}
-  - {fileID: 3408316220301095377, guid: 1212006cbbda546668daf141c9383ba4, type: 3}
   - {fileID: 8080158138695598659, guid: 6ab17978319c547fba9160a61df2cbec, type: 3}
 --- !u!1 &2305867920922239806
 GameObject:
@@ -4554,10 +4552,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelManager: {fileID: 9166025620740607941}
-  enableCharactersName:
-  - Muflus
-  - Uma
-  - H4ck
 --- !u!1 &5393381855419559497
 GameObject:
   m_ObjectHideFlags: 0

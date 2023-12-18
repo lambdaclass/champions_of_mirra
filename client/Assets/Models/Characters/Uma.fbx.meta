@@ -12,6 +12,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Uma_txt
+    second: {fileID: 2100000, guid: 131bc62d95ec04c0cbc58733eb183715, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: emission
     second: {fileID: 2100000, guid: 03da282fc65c2484b8116cad1db1702c, type: 2}
   - first:
