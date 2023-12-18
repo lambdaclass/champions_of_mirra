@@ -116,3 +116,7 @@ mono_crash*.blob
 
 /Assets/ThirdParty/TopDownEngine/
 /Assets/ThirdParty/TopDownEngine.meta
+/Assets/ThirdParty/Map Maker/
+/Assets/ThirdParty/Map Maker.meta
+/Assets/ThirdParty/RPG and MMO UI 6/
+/Assets/ThirdParty/RPG and MMO UI 6.meta
