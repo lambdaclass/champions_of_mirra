@@ -6,36 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TitleScreen.unity
-    guid: 4900ba75a16aa4edbb73129a2a725d34
+    path: Assets/Scenes/Overworld.unity
+    guid: b2f86765a5d9e4ffd8beff434cb7de6e
   - enabled: 1
-    path: Assets/Scenes/MainScreen.unity
-    guid: e82d32a8f63314ac3952d12e1e5eb447
-  - enabled: 1
-    path: Assets/Scenes/Lobby.unity
-    guid: eca446aa72db645d9835a2bf3d9cfc7d
-  - enabled: 1
-    path: Assets/Scenes/CharacterList.unity
-    guid: 14a4b55aedccb47048005bd6c5ced949
-  - enabled: 1
-    path: Assets/Scenes/CharacterInfo.unity
-    guid: 3e69def80fd2b449bb2871e03dc161e6
-  - enabled: 1
-    path: Assets/Scenes/Lobbies.unity
-    guid: 779f20ac506a141c187e03f3027d80d1
-  - enabled: 1
-    path: Assets/Scenes/CharacterSelection.unity
-    guid: c796279466b2c48518d16be8290b7f99
-  - enabled: 1
-    path: Assets/Scenes/DeprecatedLobby.unity
-    guid: a1e874fb97e2f4273a5c06e47683bb16
-  - enabled: 0
-    path: Assets/ThirdParty/TopDownEngine/ThirdParty/MoreMountains/MMTools/Tools/MMSceneLoading/LoadingScreens/LoadingScreen.unity
-    guid: 888394d52616e5e42b3b54c3f2bbd3eb
-  - enabled: 1
-    path: Assets/Scenes/Battle.unity
-    guid: 05fef88649e8f4e679906112b77aba2f
-  - enabled: 1
-    path: Assets/Scenes/CharacterSelection.unity
-    guid: c796279466b2c48518d16be8290b7f99
+    path: Assets/Scenes/Campaign.unity
+    guid: 113802530606d46628e9c3f78097e9ef
   m_configObjects: {}
