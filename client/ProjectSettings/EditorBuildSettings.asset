@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Campaign.unity
     guid: 113802530606d46628e9c3f78097e9ef
+  - enabled: 1
+    path: Assets/Scenes/Lineup.unity
+    guid: 324a0d32698a84c71930cf1ff4f898f2
   m_configObjects: {}
