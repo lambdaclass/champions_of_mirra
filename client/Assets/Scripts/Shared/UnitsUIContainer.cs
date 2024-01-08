@@ -20,6 +20,7 @@ public class UnitsUIContainer : MonoBehaviour
     public void Populate(List<Unit> units, IUnitPopulator unitPopulator = null)
     {
         unitsContainer.SetActive(false);
+        this.Clear();
         units.ForEach(unit =>
         {
             GameObject unitUIItem = Instantiate(unitItemUIPrefab, unitsContainer.transform);
@@ -33,6 +34,15 @@ public class UnitsUIContainer : MonoBehaviour
             unitUIItemDictionary.Add(unit.id, unitUIItem);
         });
         unitsContainer.SetActive(true);
+    }
+
+    public void Clear()
+    {
+        foreach (Transform child in unitsContainer.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        unitUIItemDictionary.Clear();
     }
 
     public void SelectUnit(Unit unit, Button unitItemButton)

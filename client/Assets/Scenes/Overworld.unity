@@ -271,6 +271,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1938758588}
     m_Modifications:
+    - target: {fileID: 5680396890292483277, guid: c36f69f305d3c4336a02acc5a4050f98,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5680396890292483277, guid: c36f69f305d3c4336a02acc5a4050f98,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5680396890292483277, guid: c36f69f305d3c4336a02acc5a4050f98,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1609519950}
+    - target: {fileID: 5680396890292483277, guid: c36f69f305d3c4336a02acc5a4050f98,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5680396890292483277, guid: c36f69f305d3c4336a02acc5a4050f98,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeToScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 5680396890292483277, guid: c36f69f305d3c4336a02acc5a4050f98,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5680396890292483277, guid: c36f69f305d3c4336a02acc5a4050f98,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: UnitList
+      objectReference: {fileID: 0}
+    - target: {fileID: 5680396890292483277, guid: c36f69f305d3c4336a02acc5a4050f98,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7414010532041107326, guid: c36f69f305d3c4336a02acc5a4050f98,
         type: 3}
       propertyPath: m_Sprite
