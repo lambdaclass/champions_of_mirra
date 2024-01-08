@@ -1,11 +1,8 @@
 using System;
-using System.Collections.Generic;
 
 [Serializable]
-public class User
+public class UserDTO
 {
     public string id { get; set; }
     public string username { get; set; }
-
-    public List<Unit> units { get; set; }
 }

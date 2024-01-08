@@ -21,54 +21,76 @@ public class BattleManager : MonoBehaviour
     [SerializeField]
     List<Character> characters;
 
+    readonly string playerDeviceId = "user1";
+
     void Start()
     {
-        GlobalUserData globalUserData = GlobalUserData.Instance;
-        OpponentData opponentData = OpponentData.Instance;
+        GetAndSetUpUserAvailableUnits(playerDeviceId, true);
 
-        List<Unit> userUnits = globalUserData.Units;
-        List<Unit> opponentUnits = opponentData.Units;
+        GetAndSetUpUserAvailableUnits("user2", false);
 
-        SetUpUnits(userUnits, opponentUnits);
-
-        bool won = Battle(userUnits, opponentUnits);
-        if(won) {
-            victorySplash.SetActive(true);
-        } else {
-            defeatSplash.SetActive(true);
-        }
-        opponentData.Destroy();
+        StartCoroutine(
+            BackendConnection.GetOpponents
+            (
+                playerDeviceId, opponents => {
+                    string opponentId = opponents[0].id;
+                    SimulateBattle(playerDeviceId, opponentId);                    
+                },
+                error => {
+                    Debug.LogError("Error when getting the opponents: " + error);
+                }
+            )
+        );
     }
 
-    // Run a battle between two teams. Returns true if our user wins
-    public bool Battle(List<Unit> team1, List<Unit> team2)
-    {
-        int team1AggLevel = CalculateAggregateLevel(team1);
-        int team2AggLevel = CalculateAggregateLevel(team2);
-        int totalLevel = team1AggLevel + team2AggLevel;
-
-        return UnityEngine.Random.Range(1, totalLevel + 1) <= team1AggLevel;
-    }
-
-    // Helper method to calculate the aggregate level of a team
-    private int CalculateAggregateLevel(List<Unit> team)
-    {
-        return team.Sum(unit => unit.level);
-    }
-
-    private void SetUpUnits(List<Unit> userUnits, List<Unit> opponentUnits)
-    {
-        SetUpUserUnits(userUnits, true);
-        SetUpUserUnits(opponentUnits, false);
-    }
-
-    private void SetUpUserUnits(List<Unit> units, bool isPlayer)
+    private void SetUpSelectedUnits(List<Unit> units, bool isPlayer)
     {
         UnitPosition[] unitPositions = isPlayer ? playerUnitPositions : opponentUnitPositions;
         foreach(Unit unit in units.Where(unit => unit.selected && unit.slot.Value < unitPositions.Length)) {
             UnitPosition unitPosition;
             unitPosition = unitPositions[unit.slot.Value];
-            unitPosition.SetUnit(unit, isPlayer);    
+            unitPosition.SetUnit(unit, isPlayer);
         }
+    }
+
+    private void GetAndSetUpUserAvailableUnits(string playerDeviceId, bool isPlayer)
+    {
+        StartCoroutine(
+            BackendConnection.GetAvailableUnits(
+                playerDeviceId,
+                units => {
+                    List<Unit> unitList = units.Select(unit => new Unit
+                    {
+                        unitId = unit.id,
+                        level = unit.level,
+                        character = characters.Find(character => unit.character.ToLower() == character.name.ToLower()),
+                        slot = unit.slot,
+                        selected = unit.selected
+                    }).ToList();
+                    SetUpSelectedUnits(unitList, isPlayer);
+                },
+                error => {
+                    Debug.LogError("Error when getting the available units: " + error);
+                }
+            )
+        );
+    }
+
+    private void SimulateBattle(string playerDeviceId, string opponentId)
+    {
+        StartCoroutine(
+            BackendConnection.GetBattleResult(playerDeviceId, opponentId,
+                winnerId => {
+                    if(winnerId == opponentId) {
+                        defeatSplash.SetActive(true);
+                    } else {
+                        victorySplash.SetActive(true);
+                    }
+                },
+                error => {
+                    Debug.LogError("Error when getting the battle result: " + error);
+                }
+            )
+        );
     }
 }
