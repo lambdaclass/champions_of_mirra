@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Overworld.unity
     guid: b2f86765a5d9e4ffd8beff434cb7de6e
   - enabled: 1
-    path: Assets/Scenes/Campaign.unity
+    path: Assets/Scenes/CampaignLevel.unity
     guid: 113802530606d46628e9c3f78097e9ef
   - enabled: 1
     path: Assets/Scenes/Lineup.unity
