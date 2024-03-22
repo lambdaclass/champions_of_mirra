@@ -318,6 +318,18 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5786918670775350524, guid: 80a0e36580b14449684c7d9d960c6ba2, type: 3}
+      propertyPath: m_Name
+      value: PopUpErrorSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 8025216740175069464, guid: 80a0e36580b14449684c7d9d960c6ba2, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a47ea83357c446c6a6f5800617a60a9, type: 3}
+    - target: {fileID: 8025216740175069464, guid: 80a0e36580b14449684c7d9d960c6ba2, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8902849820822576112, guid: 80a0e36580b14449684c7d9d960c6ba2, type: 3}
       propertyPath: m_Name
       value: CloseButton
