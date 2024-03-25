@@ -14,12 +14,8 @@ public class AscensionManager : MonoBehaviour, IUnitPopulator
     GameObject characterNameContainer;
     [SerializeField]
     Image selectedCharacterImage;
-	
-	// Error popup
 	[SerializeField]
 	GameObject errorPopup;
-	[SerializeField]
-	TMP_Text errorMessage;
 
     private List<Unit> selectedUnits;
 
@@ -96,17 +92,7 @@ public class AscensionManager : MonoBehaviour, IUnitPopulator
 				selectedCharacterImage.transform.parent.gameObject.SetActive(false);
 			},
 			(error) => {
-				switch (error) {
-					case "consumed_units_invalid":
-						errorMessage.text = "The selected units are invalid for fusion";
-						break;
-					case "cant_rank_up":
-						errorMessage.text = "Can't rank up unit";
-						break;
-					default:
-						errorMessage.text = error;
-						break;
-				}
+				Debug.LogError(error);
 				errorPopup.SetActive(true);
 			}
 		);

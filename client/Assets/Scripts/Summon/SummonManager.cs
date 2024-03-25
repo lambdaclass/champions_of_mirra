@@ -16,7 +16,10 @@ public class SummonManager : MonoBehaviour
 	GameObject boxesContainer;
 
 	[SerializeField]
-	PopupButtonsController confirmPopup;
+	GameObject confirmPopup;
+
+	[SerializeField]
+	Button confirmPopupButton;
 
 	[SerializeField]
 	GameObject newCharacterContainer;
@@ -54,9 +57,9 @@ public class SummonManager : MonoBehaviour
 	}
 
 	void ShowConfirmPopup(string userId, Box box) {
-		confirmPopup.ConfirmButton.onClick.RemoveAllListeners();
+		confirmPopupButton.onClick.RemoveAllListeners();
 		UnityAction onClickAction = () => Summon(userId, box);
-		confirmPopup.ConfirmButton.onClick.AddListener(onClickAction);
+		confirmPopupButton.onClick.AddListener(onClickAction);
 		confirmPopup.gameObject.SetActive(true);
 	}
 

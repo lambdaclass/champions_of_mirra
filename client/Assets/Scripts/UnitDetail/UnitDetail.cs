@@ -122,6 +122,7 @@ public class UnitDetail : MonoBehaviour
             equipmentSlots.Find(slot => slot.EquipmentType == item.template.type).SetEquippedItem(item);
         }
     }
+	
     private void SetBackgroundImage() 
     {
         switch (selectedUnit.character.faction) 

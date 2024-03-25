@@ -2064,7 +2064,7 @@ GameObject:
   - component: {fileID: 5103289772286149522}
   - component: {fileID: 5103289772286149521}
   m_Layer: 0
-  m_Name: RejectPopup
+  m_Name: InsufficientCurrencyPopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PopupButtonsController : MonoBehaviour
+public class ClosePopupWithSound : MonoBehaviour
 {
 	[SerializeField]
 	Button confirmButton;
