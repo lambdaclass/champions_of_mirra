@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class CampaignLevelIndicator : MonoBehaviour
 {
     public LevelData levelData;
+	public LevelData nextLevelData;
 
     [SerializeField]
 	GameObject lockObject;
@@ -17,18 +18,14 @@ public class CampaignLevelIndicator : MonoBehaviour
 	CampaignLevelsManager campaignLevelManager;
 
     public void Init() {
-        if(levelData.status == LevelProgressData.Status.Unlocked) {
-			LevelProgressData.Instance.SetUnlocked(name);
-		}
-
         switch(levelData.status) 
         {
-            case LevelProgressData.Status.Locked:
+            case LevelProgress.Status.Locked:
                 break;
-            case LevelProgressData.Status.Unlocked:
+            case LevelProgress.Status.Unlocked:
 				lockObject.SetActive(false);
                 break;
-            case LevelProgressData.Status.Completed:
+            case LevelProgress.Status.Completed:
                 completedCrossObject.SetActive(true);
 				lockObject.SetActive(false);
                 break;
@@ -39,22 +36,10 @@ public class CampaignLevelIndicator : MonoBehaviour
 		campaignLevelManager.LevelSelected();
         
         SetLevel();
-        SetLevelToComplete();
-        SetLevelToUnlock();
     }
 
     private void SetLevel() {
-        BattleManager.selectedLevelData = levelData;
-    }
-
-    private void SetLevelToComplete() {
-        LevelProgressData.Instance.LevelToCompleteName = name;
-    }
-
-    private void SetLevelToUnlock() {
-        // if(levelData.nextLevel != null) { LevelProgressData.Instance.LevelToUnlockName = levelData.nextLevel.name; }
-        // else { LevelProgressData.Instance.LevelToUnlockName = null; }
-
-        LevelProgressData.Instance.LevelToUnlockName = null;
+        LevelProgress.selectedLevelData = levelData;
+		LevelProgress.nextLevelData = nextLevelData;
     }
 }

@@ -434,7 +434,7 @@ RectTransform:
   - {fileID: 1671928741}
   - {fileID: 1468786276}
   m_Father: {fileID: 442142762}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.6666667}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -532,7 +532,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CampaignsMap
+          m_StringArgument: Campaign
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!82 &66932676
@@ -667,7 +667,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 443.6019, y: -125}
+  m_AnchoredPosition: {x: 443.7149, y: -125}
   m_SizeDelta: {x: 700, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &77190553
@@ -876,7 +876,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 443.6019, y: -317}
+  m_AnchoredPosition: {x: 443.7149, y: -317}
   m_SizeDelta: {x: 600, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &97969248
@@ -1226,15 +1226,15 @@ RectTransform:
   m_GameObject: {fileID: 208124953}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.00032, y: 1.00032, z: 1.00032}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 261761396}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 139}
+  m_AnchoredPosition: {x: 0, y: 200}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &208124955
@@ -1257,7 +1257,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tap Anywhere to Return
+  m_text: Tap to return
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad7095a8160a94dc2a8c06bc9c4db145, type: 2}
   m_sharedMaterial: {fileID: -6215521632685670565, guid: ad7095a8160a94dc2a8c06bc9c4db145, type: 2}
@@ -1515,7 +1515,7 @@ RectTransform:
   - {fileID: 673112276}
   - {fileID: 208124954}
   m_Father: {fileID: 442142762}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1535,7 +1535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.6666667}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1613,7 +1613,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CampaignsMap
+          m_StringArgument: Campaign
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!82 &261761400
@@ -2116,7 +2116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 592328171768511052, guid: 580c190a426d64bc2adb1771024b893c, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1325159749795653448, guid: 580c190a426d64bc2adb1771024b893c, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2745,7 +2745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224617439908966828, guid: f9fa21dca98874c4196e015010414446, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -700
+      value: -600
       objectReference: {fileID: 0}
     - target: {fileID: 224617439908966828, guid: f9fa21dca98874c4196e015010414446, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3744,7 +3744,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: -36}
-  m_SizeDelta: {x: 887.2038, y: 103.12796}
+  m_SizeDelta: {x: 887.4298, y: 102.98056}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1203094056
 MonoBehaviour:
@@ -3931,8 +3931,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 443.6019, y: -90}
-  m_SizeDelta: {x: 887.2038, y: 180}
+  m_AnchoredPosition: {x: 443.7149, y: -90}
+  m_SizeDelta: {x: 887.4298, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1400979476
 MonoBehaviour:
@@ -4069,7 +4069,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 139}
+  m_AnchoredPosition: {x: 0, y: 200}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1468786277
@@ -4092,7 +4092,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tap Anywhere to Return
+  m_text: Tap to return
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ad7095a8160a94dc2a8c06bc9c4db145, type: 2}
   m_sharedMaterial: {fileID: -6215521632685670565, guid: ad7095a8160a94dc2a8c06bc9c4db145, type: 2}
@@ -4740,23 +4740,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114745404925296982, guid: f9fa21dca98874c4196e015010414446, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114745404925296982, guid: f9fa21dca98874c4196e015010414446, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1419209955}
+      objectReference: {fileID: 1419209957}
     - target: {fileID: 114745404925296982, guid: f9fa21dca98874c4196e015010414446, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114745404925296982, guid: f9fa21dca98874c4196e015010414446, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Next
+      value: ChangeToScene
       objectReference: {fileID: 0}
     - target: {fileID: 114745404925296982, guid: f9fa21dca98874c4196e015010414446, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: BattleManager, Assembly-CSharp
+      value: LevelManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114745404925296982, guid: f9fa21dca98874c4196e015010414446, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: CampaignsMap
       objectReference: {fileID: 0}
     - target: {fileID: 114745404925296982, guid: f9fa21dca98874c4196e015010414446, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -4864,7 +4868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224617439908966828, guid: f9fa21dca98874c4196e015010414446, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -700
+      value: -600
       objectReference: {fileID: 0}
     - target: {fileID: 224617439908966828, guid: f9fa21dca98874c4196e015010414446, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5134,8 +5138,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 443.6019, y: -588.82996}
-  m_SizeDelta: {x: 887.2038, y: 817.66}
+  m_AnchoredPosition: {x: 443.7149, y: -588.82996}
+  m_SizeDelta: {x: 887.4298, y: 817.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1864115997
 MonoBehaviour:

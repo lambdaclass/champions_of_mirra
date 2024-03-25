@@ -34,7 +34,7 @@ public class LineupManager : MonoBehaviour, IUnitPopulator
 
         unitsContainer.OnUnitSelected.AddListener(AddUnitToLineup);
         
-        LevelData levelData = BattleManager.selectedLevelData;
+        LevelData levelData = LevelProgress.selectedLevelData;
         SetUpSelectedUnits(levelData.units, false);
     }
 

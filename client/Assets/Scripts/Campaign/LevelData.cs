@@ -19,5 +19,5 @@ public class LevelData
 
     public int experienceReward;
 
-    public LevelProgressData.Status status;
+    public LevelProgress.Status status;
 }

@@ -219,19 +219,19 @@ public class SocketConnection : MonoBehaviour {
     {
 		List<(string campaignId, string levelId)> userCampaignsProgress = GlobalUserData.Instance.User.campaignsProgress;
         List<Campaign> campaigns = new List<Campaign>();
-		LevelProgressData.Status campaignStatus = LevelProgressData.Status.Completed;
+		LevelProgress.Status campaignStatus = LevelProgress.Status.Completed;
 
 		// Currently looping through all the campaigns like they all belong to the same super campaign
 		foreach(Protobuf.Messages.Campaign campaignData in campaignsData.Campaigns_)
         {
-			LevelProgressData.Status levelStatus = LevelProgressData.Status.Completed;
+			LevelProgress.Status levelStatus = LevelProgress.Status.Completed;
             List<LevelData> levels = new List<LevelData>();
 			
 			foreach(Protobuf.Messages.Level level in campaignData.Levels.OrderBy(level => level.LevelNumber))
             {
 				List<Unit> levelUnits = CreateUnitsFromData(level.Units, availableCharacters);
 
-				levelStatus = userCampaignsProgress.Any(cp => cp.campaignId == campaignData.Id && cp.levelId == level.Id) ? LevelProgressData.Status.Unlocked : levelStatus;
+				levelStatus = userCampaignsProgress.Any(cp => cp.campaignId == campaignData.Id && cp.levelId == level.Id) ? LevelProgress.Status.Unlocked : levelStatus;
 
                 levels.Add(new LevelData
                 {
@@ -243,22 +243,23 @@ public class SocketConnection : MonoBehaviour {
                     status = levelStatus
                 });
 
-				if(levelStatus == LevelProgressData.Status.Unlocked) {
-					levelStatus = LevelProgressData.Status.Locked;
+				if(levelStatus == LevelProgress.Status.Unlocked) {
+					levelStatus = LevelProgress.Status.Locked;
 				}
             }
 
-			campaignStatus = userCampaignsProgress.Any(cp => cp.campaignId == campaignData.Id) ? LevelProgressData.Status.Unlocked : campaignStatus;
+			campaignStatus = userCampaignsProgress.Any(cp => cp.campaignId == campaignData.Id) ? LevelProgress.Status.Unlocked : campaignStatus;
 
             campaigns.Add(new Campaign
             {
 				campaignId = campaignData.Id,
+				campaignNumber = (int)campaignData.CampaignNumber,
                 status = campaignStatus,
                 levels = levels
             });
 
-			if(campaignStatus == LevelProgressData.Status.Unlocked) {
-				campaignStatus = LevelProgressData.Status.Locked;
+			if(campaignStatus == LevelProgress.Status.Unlocked) {
+				campaignStatus = LevelProgress.Status.Locked;
 			}
         }
 

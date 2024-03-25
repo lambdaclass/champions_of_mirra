@@ -22,7 +22,7 @@ public class CampaignItem : MonoBehaviour
     // Load campaign scene if its unlocked. Scene needs to have the same name as our campaign object.
     public void SelectCampaign()
     {
-        if (campaignData.status == LevelProgressData.Status.Unlocked) {
+        if (campaignData.status == LevelProgress.Status.Unlocked) {
             CampaignManager.selectedCampaignData = campaignData;
             CampaignManager.campaignPrefab = campaignToShowPrefab;
             sceneManager.ChangeToSceneWithDelay("Campaign");
@@ -34,12 +34,12 @@ public class CampaignItem : MonoBehaviour
         this.campaignData = campaignData;
         switch(this.campaignData.status) 
         {
-            case LevelProgressData.Status.Locked:
+            case LevelProgress.Status.Locked:
                 break;
-            case LevelProgressData.Status.Unlocked:
+            case LevelProgress.Status.Unlocked:
 				lockObject.SetActive(false);
                 break;
-            case LevelProgressData.Status.Completed:
+            case LevelProgress.Status.Completed:
                 completedCrossObject.SetActive(true);
 				lockObject.SetActive(false);
                 break;
