@@ -164,7 +164,7 @@ public class SocketConnection : MonoBehaviour {
 			currencies = currencies,
 			level = (int)user.Level,
 			experience = (int)user.Experience,
-			campaignsProgress = user.CampaignProgresses.Select(campaignProgress => (campaignProgress.CampaignId, campaignProgress.LevelId)).ToList()
+			superCampaignsProgress = user.SuperCampaignProgresses.Select(superCampaignProgress => (superCampaignProgress.SuperCampaignId, superCampaignProgress.LevelId)).ToList()
 		};
 	}
 	
@@ -217,7 +217,7 @@ public class SocketConnection : MonoBehaviour {
 
 	private List<Campaign> ParseCampaignsFromResponse(Protobuf.Messages.Campaigns campaignsData, List<Character> availableCharacters)
     {
-		List<(string campaignId, string levelId)> userCampaignsProgress = GlobalUserData.Instance.User.campaignsProgress;
+		List<(string campaignId, string levelId)> userCampaignsProgress = GlobalUserData.Instance.User.superCampaignsProgress;
         List<Campaign> campaigns = new List<Campaign>();
 		LevelProgressData.Status campaignStatus = LevelProgressData.Status.Completed;
 
