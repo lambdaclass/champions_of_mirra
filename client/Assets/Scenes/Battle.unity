@@ -4278,9 +4278,19 @@ PrefabInstance:
       objectReference: {fileID: 1180915469}
     - target: {fileID: 8472880968890490899, guid: 62eb30154c76d4e0fb902ff01db61581,
         type: 3}
+      propertyPath: poolHandler
+      value: 
+      objectReference: {fileID: 8472880970037954474}
+    - target: {fileID: 8472880968890490899, guid: 62eb30154c76d4e0fb902ff01db61581,
+        type: 3}
       propertyPath: InputManager
       value: 
       objectReference: {fileID: 2856279044554654230}
+    - target: {fileID: 8472880968890490899, guid: 62eb30154c76d4e0fb902ff01db61581,
+        type: 3}
+      propertyPath: poolsHandler
+      value: 
+      objectReference: {fileID: 8472880970037954474}
     - target: {fileID: 8472880968890490899, guid: 62eb30154c76d4e0fb902ff01db61581,
         type: 3}
       propertyPath: CustomGUIManager
@@ -4410,3 +4420,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cratesList: {fileID: 11400000, guid: e47e9c3c448dd47878d8f73cbd72b85b, type: 2}
+--- !u!114 &8472880970037954474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866407597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc996408fce774ca6bc0b609477198a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

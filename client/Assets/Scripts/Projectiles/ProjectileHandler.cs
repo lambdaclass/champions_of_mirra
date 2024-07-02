@@ -15,7 +15,7 @@ public class ProjectileHandler : MonoBehaviour
         {
             GameObject projectileFromSkill = skillInfo.projectilePrefab;
             MMSimpleObjectPooler objectPooler = Utils.SimpleObjectPooler(
-                projectileFromSkill.name + "Pooler",
+                projectileFromSkill.name + "_Pooler",
                 transform.parent,
                 projectileFromSkill
             );

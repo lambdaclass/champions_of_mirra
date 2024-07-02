@@ -876,7 +876,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 2
+      m_SerializableObject: 5
     m_Space: 2147483647
   m_Property:
     name: Lifetime
@@ -900,7 +900,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 114350483966674976}
-  m_Children: []
+  m_Children:
+  - {fileID: 8926484042661618032}
   m_UIPosition: {x: 57, y: 757}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
@@ -2489,6 +2490,7 @@ MonoBehaviour:
   - {fileID: 8926484042661617327}
   - {fileID: 8926484042661615606}
   - {fileID: 8926484042661616946}
+  - {fileID: 8926484042661618030}
   m_UIPosition: {x: 2317, y: 4079}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
@@ -4698,7 +4700,7 @@ MonoBehaviour:
     linkedSlots:
     - outputSlot: {fileID: 8926484042661615884}
       inputSlot: {fileID: 8926484042661614927}
-    position: {x: -131, y: 442}
+    position: {x: -137, y: 435}
     expandedSlots: []
     expanded: 0
   - m_Id: 1
@@ -4756,6 +4758,20 @@ MonoBehaviour:
     position: {x: 6211, y: 658}
     expandedSlots: []
     expanded: 0
+  - m_Id: 10
+    linkedSlots:
+    - outputSlot: {fileID: 8926484042661615884}
+      inputSlot: {fileID: 8926484042661618031}
+    position: {x: 2045, y: 4394}
+    expandedSlots: []
+    expanded: 0
+  - m_Id: 11
+    linkedSlots:
+    - outputSlot: {fileID: 8926484042661615884}
+      inputSlot: {fileID: 8926484042661618033}
+    position: {x: -189, y: 818.5}
+    expandedSlots: []
+    expanded: 0
 --- !u!114 &8926484042661615884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4801,6 +4817,8 @@ MonoBehaviour:
   - {fileID: 8926484042661617372}
   - {fileID: 8926484042661617332}
   - {fileID: 8926484042661617379}
+  - {fileID: 8926484042661618031}
+  - {fileID: 8926484042661618033}
 --- !u!114 &8926484042661616109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7816,7 +7834,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 0
+  m_UICollapsed: 1
   m_UISuperCollapsed: 0
   m_InputSlots: []
   m_OutputSlots:
@@ -7862,7 +7880,7 @@ MonoBehaviour:
     linkedSlots:
     - outputSlot: {fileID: 8926484042661616937}
       inputSlot: {fileID: 8926484042661616947}
-    position: {x: 2045, y: 4444}
+    position: {x: 2045, y: 4317}
     expandedSlots: []
     expanded: 0
   - m_Id: 3
@@ -28772,3 +28790,127 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
   m_Direction: 0
   m_LinkedSlots: []
+--- !u!114 &8926484042661618030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a971fa2e110a0ac42ac1d8dae408704b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UIIgnoredErrors: []
+  m_Parent: {fileID: 8926484042661615467}
+  m_Children: []
+  m_UIPosition: {x: 0, y: 2}
+  m_UICollapsed: 0
+  m_UISuperCollapsed: 0
+  m_InputSlots:
+  - {fileID: 8926484042661618031}
+  m_OutputSlots: []
+  m_Disabled: 0
+  attribute: lifetime
+  Composition: 0
+  Source: 0
+  Random: 0
+  channels: 6
+--- !u!114 &8926484042661618031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f780aa281814f9842a7c076d436932e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UIIgnoredErrors: []
+  m_Parent: {fileID: 0}
+  m_Children: []
+  m_UIPosition: {x: 0, y: 0}
+  m_UICollapsed: 1
+  m_UISuperCollapsed: 0
+  m_MasterSlot: {fileID: 8926484042661618031}
+  m_MasterData:
+    m_Owner: {fileID: 8926484042661618030}
+    m_Value:
+      m_Type:
+        m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+      m_SerializableObject: 2
+    m_Space: 2147483647
+  m_Property:
+    name: Lifetime
+    m_serializedType:
+      m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+  m_Direction: 0
+  m_LinkedSlots:
+  - {fileID: 8926484042661615884}
+--- !u!114 &8926484042661618032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a971fa2e110a0ac42ac1d8dae408704b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UIIgnoredErrors: []
+  m_Parent: {fileID: 8926484042661614939}
+  m_Children: []
+  m_UIPosition: {x: 179.23859, y: 14.325073}
+  m_UICollapsed: 0
+  m_UISuperCollapsed: 0
+  m_InputSlots:
+  - {fileID: 8926484042661618033}
+  m_OutputSlots: []
+  m_Disabled: 0
+  attribute: lifetime
+  Composition: 0
+  Source: 0
+  Random: 0
+  channels: 6
+--- !u!114 &8926484042661618033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f780aa281814f9842a7c076d436932e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UIIgnoredErrors: []
+  m_Parent: {fileID: 0}
+  m_Children: []
+  m_UIPosition: {x: 0, y: 0}
+  m_UICollapsed: 1
+  m_UISuperCollapsed: 0
+  m_MasterSlot: {fileID: 8926484042661618033}
+  m_MasterData:
+    m_Owner: {fileID: 8926484042661618032}
+    m_Value:
+      m_Type:
+        m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+      m_SerializableObject: 5
+    m_Space: 2147483647
+  m_Property:
+    name: Lifetime
+    m_serializedType:
+      m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+  m_Direction: 0
+  m_LinkedSlots:
+  - {fileID: 8926484042661615884}

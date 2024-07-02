@@ -21,8 +21,11 @@ MonoBehaviour:
   indicatorType: 1
   hasProjectile: 0
   hasSkillPool: 1
+  projectileSkillKey: 
+  poolSkillKey: 2
   projectilePrefab: {fileID: 0}
-  skillKey: 
+  poolPrefab: {fileID: 6888337135511328701, guid: c5b9cf6f7da90a048bf82339301b5f38,
+    type: 3}
   animationSpeedMultiplier: 3
   abilityStartSfx: {fileID: 8300000, guid: 0f1ef727548bc4e8ba90f73e18aa2c44, type: 3}
   sfxHasAbilityStop: 0
@@ -31,18 +34,13 @@ MonoBehaviour:
   skillConeAngle: 0
   arrowWidth: 0
   skillAreaRadius: 0
+  usesHitboxAsArea: 0
   useCooldown: 1
-  damage: 0
-  cooldown: 0
-  skillRange: 0
   skillSprite: {fileID: 21300000, guid: 165e2e85b1bd54f2389f3b424e20bbb1, type: 3}
   vfxList:
   - vfx: {fileID: 7408538769109093279, guid: 9b3089641f7b7aa49afe1ba4dcaeadef, type: 3}
     duration: 1.8
     delay: 0.3
     instantiateVfxOnModel: 0
-  - vfx: {fileID: 6888337135511328701, guid: c5b9cf6f7da90a048bf82339301b5f38, type: 3}
-    duration: 5
-    delay: 0.6
-    instantiateVfxOnModel: 0
+    hasDestination: 0
   animationList: []

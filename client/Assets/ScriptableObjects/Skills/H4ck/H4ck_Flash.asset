@@ -21,8 +21,10 @@ MonoBehaviour:
   indicatorType: 2
   hasProjectile: 0
   hasSkillPool: 0
+  projectileSkillKey: 
+  poolSkillKey: 
   projectilePrefab: {fileID: 0}
-  skillKey: 
+  poolPrefab: {fileID: 0}
   animationSpeedMultiplier: 3
   abilityStartSfx: {fileID: 8300000, guid: 0f1ef727548bc4e8ba90f73e18aa2c44, type: 3}
   sfxHasAbilityStop: 0

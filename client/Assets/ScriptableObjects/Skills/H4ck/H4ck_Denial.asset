@@ -21,9 +21,11 @@ MonoBehaviour:
   indicatorType: 1
   hasProjectile: 0
   hasSkillPool: 1
-  projectilePrefab: {fileID: 5269552939558784490, guid: 64e26cf3287d24acca520873be768293,
+  projectileSkillKey: 
+  poolSkillKey: 2
+  projectilePrefab: {fileID: 0}
+  poolPrefab: {fileID: 9197403966285785662, guid: 732fdbae74040b44f9c6d1195edfe069,
     type: 3}
-  skillKey: 2
   animationSpeedMultiplier: 3
   abilityStartSfx: {fileID: 8300000, guid: 0f1ef727548bc4e8ba90f73e18aa2c44, type: 3}
   sfxHasAbilityStop: 0
@@ -40,10 +42,5 @@ MonoBehaviour:
     duration: 1
     delay: 0
     instantiateVfxOnModel: 1
-    hasDestination: 0
-  - vfx: {fileID: 9197403966285785662, guid: 732fdbae74040b44f9c6d1195edfe069, type: 3}
-    duration: 2.5
-    delay: 0.6
-    instantiateVfxOnModel: 0
     hasDestination: 0
   animationList: []
