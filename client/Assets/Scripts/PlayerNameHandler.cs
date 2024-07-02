@@ -38,6 +38,8 @@ public class PlayerNameHandler : MonoBehaviour
 
     const string EMPTY_NAME_MESSAGE = "Player name cannot be empty.";
 
+    const string CLOSE_WITHOUT_NAME_MESSAGE = "You need to set a player name to play the game.";
+
     public void SetPlayerName()
     {
         this.playerName = playerNameInput.text.Trim();
@@ -113,5 +115,18 @@ public class PlayerNameHandler : MonoBehaviour
     private void Hide()
     {
         this.playerNameHandler.SetActive(false);
+    }
+
+    public void ClosePopup()
+    {
+        TextMeshProUGUI textMesh = this.errorMessage.GetComponent<TextMeshProUGUI>();
+        if (!PlayerPrefs.HasKey(PLAYER_NAME_KEY))
+        {
+            textMesh.text = CLOSE_WITHOUT_NAME_MESSAGE;
+            this.errorMessage.SetActive(true);
+            return;
+        }
+        this.errorMessage.SetActive(false);
+        this.Hide();
     }
 }
