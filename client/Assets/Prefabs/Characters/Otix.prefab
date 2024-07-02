@@ -513,8 +513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aad69d9b41024b9e8f313a6dce47cd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterModel: {fileID: 7579070707785900734}
-  weaponModel: {fileID: 0}
+  characterModelBody: {fileID: 9102865187171786286}
   feedbacksStatesPrefabs:
   - {fileID: 0}
   - {fileID: 0}
@@ -531,9 +530,8 @@ MonoBehaviour:
     type: 3}
   myrrasBlessingVFX: {fileID: 5796624995586497347, guid: ed64eeaf76997fc4891dd40c05a751a3,
     type: 3}
+  giantFruitVFX: {fileID: 0}
   healthBar: {fileID: 8711474442059621043}
-  damageOverlayColor: {r: 0, g: 0, b: 0, a: 0}
-  healOverlayColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &3848229883583172591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -982,6 +980,12 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &9102865187171786286 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1998739371193024961, guid: 8c9875a4f0d5c46dfbbd2ff37bd71612,
+    type: 3}
+  m_PrefabInstance: {fileID: 7345139505670168559}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8357189057863228491
 PrefabInstance:
   m_ObjectHideFlags: 0

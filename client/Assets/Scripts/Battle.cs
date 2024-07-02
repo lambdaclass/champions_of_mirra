@@ -403,13 +403,6 @@ public class Battle : MonoBehaviour
                 {
                     playerCharacter.SetPlayerDead();
                 }
-
-                Transform hitbox = playerCharacter.characterBase.Hitbox.transform;
-                playerCharacter.GetComponent<CharacterController>().radius =
-                    serverPlayerUpdate.Radius / 100;
-                float hitboxSize =
-                    Utils.TransformBackenUnitToClientUnit(serverPlayerUpdate.Radius) * 2;
-                hitbox.localScale = new Vector3(hitboxSize, hitbox.localScale.y, hitboxSize);
             }
         }
     }
@@ -575,11 +568,13 @@ public class Battle : MonoBehaviour
         ].feedbackManager;
         Animator modelAnimator = playersReferences[playerUpdate.Id].modelAnimator;
 
-        var characterSpeed = playerUpdate.Speed / 100f;
+        characterFeedbacks.UpdateCharacterScale(playerUpdate.Radius);
 
         feedbackManager.ManageStateFeedbacks(playerUpdate, character);
         feedbackManager.HandlePickUpItemFeedback(playerUpdate, characterFeedbacks);
 
+
+        var characterSpeed = playerUpdate.Speed / 100f;
         if (!GameServerConnectionManager.Instance.GameHasEnded() && playerUpdate.Player.Health > 0)
         {
             HandleMovement(player, playerUpdate, pastTime, characterSpeed);

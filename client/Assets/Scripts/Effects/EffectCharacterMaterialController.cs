@@ -13,6 +13,9 @@ public class EffectCharacterMaterialController : MonoBehaviour
     private void Start()
     {
         // print(character_material_manager);
+        /// FOR TEST POPOUSES ONLY, DO NOT SHIP
+        character_material_manager = GetComponentInParent<CharacterMaterialManager>();
+        ///
         switch(controller_type)
         {
             case EffectMaterialControllerType.MATERIAL    : StartCoroutine(switchMaterialForTime()); break;

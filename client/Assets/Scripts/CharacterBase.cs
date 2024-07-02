@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using MoreMountains.Tools;
 using TMPro;
 using UnityEngine;
-using UnityEngine.VFX;
 
 public class CharacterBase : MonoBehaviour
 {

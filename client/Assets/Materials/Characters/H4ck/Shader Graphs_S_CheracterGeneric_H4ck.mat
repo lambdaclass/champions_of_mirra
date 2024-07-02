@@ -97,6 +97,7 @@ Material:
     - _EnableDetail: 0
     - _FresnelEffectAmount: 0
     - _FresnelPower: 10
+    - _FresnelSaturation: 1
     - _FresnelValue: 3
     - _ISTRANSPARENT: 0
     - _LinkDetailsWithBase: 1
@@ -121,7 +122,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColorMap_TO: {r: 1, g: 1, b: 0, a: 0}
-    - _DamageColor: {r: 0.41509432, g: 0, b: 0, a: 1}
+    - _DamageColor: {r: 0.85882354, g: 0, b: 0, a: 1}
     - _DetailMap_TO: {r: 1, g: 1, b: 0, a: 0}
     - _EmissiveColor: {r: 7.9066987, g: 7.9066987, b: 7.9066987, a: 0}
     - _EmissiveNoiseSpeed: {r: 1, g: 1, b: 0, a: 0}

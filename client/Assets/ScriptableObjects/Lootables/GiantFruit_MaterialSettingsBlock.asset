@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 846f78ba938a3e341b3955e931da6fe0, type: 3}
-  m_Name: GoldenClock_MaterialSettingsBlock
+  m_Name: GiantFruit_MaterialSettingsBlock
   m_EditorClassIdentifier: 
-  key: {fileID: 11400000, guid: 6f496bff0752bd74a9780d2c6d20e75f, type: 2}
+  key: {fileID: 11400000, guid: 58486e1d25fd7cc43b7a949057afe2cd, type: 2}
   apply_duration: 0.3
   controll_property: _FresnelEffectAmount
   float_values:
   - name: _FresnelValue
-    value: 3
+    value: 0.85
   - name: _FresnelPower
-    value: 6
+    value: 5
   - name: _FresnelSaturation
-    value: 1
+    value: 0
   color_values:
   - name: _FresnelColor
-    value: {r: 2.3461432, g: 2.2934256, b: 0.25453445, a: 0}
+    value: {r: 2.3651557, g: 1.5537568, b: 0.33434135, a: 0}
   - name: _FresnelColorPulse
-    value: {r: 0.7254902, g: 0.58431375, b: 0, a: 0}
+    value: {r: 2.9046495, g: 1.5740098, b: 0.2877247, a: 0}

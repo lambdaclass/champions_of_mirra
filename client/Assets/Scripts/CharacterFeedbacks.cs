@@ -1,7 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using CandyCoded.HapticFeedback;
+using DG.Tweening;
 using MoreMountains.Feedbacks;
 using MoreMountains.Tools;
 using UnityEngine;
@@ -15,7 +14,7 @@ public enum HapticFeedbackType
 public class CharacterFeedbacks : MonoBehaviour
 {
     [Header("Setup")]
-    public GameObject characterModel;
+    public GameObject characterModelBody;
 
     [Header("Feedbacks")]
     [SerializeField]
@@ -32,13 +31,16 @@ public class CharacterFeedbacks : MonoBehaviour
     [SerializeField]
     GameObject goldenClockVFX,
         magicBootsVFX,
-        myrrasBlessingVFX;
+        myrrasBlessingVFX,
+        giantFruitVFX;
 
     [SerializeField]
     MMProgressBar healthBar;
+    private float previousPlayerRadius;
     private bool didPickUp = false;
     private ulong playerID;
     private Material characterMaterial;
+    private Animator modelAnimator;
     private float overlayMultiplier = 0f;
     private float overlayEffectSpeed = 3f;
 
@@ -51,7 +53,8 @@ public class CharacterFeedbacks : MonoBehaviour
     void Start()
     {
         playerID = GameServerConnectionManager.Instance.playerId;
-        characterMaterial = characterModel.GetComponent<SkinnedMeshRenderer>().materials[0];
+        characterMaterial = characterModelBody.GetComponent<SkinnedMeshRenderer>().materials[0];
+        modelAnimator = GetComponent<CustomCharacter>().CharacterModel.GetComponent<Animator>();
     }
 
     void Update()
@@ -84,7 +87,7 @@ public class CharacterFeedbacks : MonoBehaviour
 
     public void PlayDeathFeedback()
     {
-        if (characterModel.activeSelf == true)
+        if (characterModelBody.activeSelf == true)
         {
             deathFeedback.SetActive(true);
         }
@@ -101,7 +104,7 @@ public class CharacterFeedbacks : MonoBehaviour
             case "golden_clock_effect":
                 return goldenClockVFX;
             case "giant_effect":
-                return goldenClockVFX;
+                return giantFruitVFX;
             default:
                 return null;
         }
@@ -176,5 +179,41 @@ public class CharacterFeedbacks : MonoBehaviour
     {
         hitFeedback.GetComponent<MMF_Player>().PlayFeedbacks();
         HapticFeedback.LightFeedback();
+    }
+
+    public void UpdateCharacterScale(float serverPlayerRadius)
+    {
+        // scale logic
+        if (serverPlayerRadius != previousPlayerRadius)
+        {
+            float radiusDiff = serverPlayerRadius - previousPlayerRadius;
+
+            if (previousPlayerRadius != 0)
+            {
+                float multiplier = CalculateScaleMultiplier(serverPlayerRadius, previousPlayerRadius);
+                float newScale = this.transform.localScale.x * multiplier;
+                float scaleAnimationDuration = 0.5f;
+                // scale animation
+                this.transform.DOScale(new Vector3(newScale, newScale, newScale), scaleAnimationDuration);
+                if (radiusDiff > 0)
+                {
+                    // scale up
+                    modelAnimator.SetFloat("Giant_Speed_Multiplier", 0.5f);
+                }
+                else
+                {
+                    // scale down
+                    modelAnimator.SetFloat("Giant_Speed_Multiplier", 1f);
+                }
+            }
+            previousPlayerRadius = serverPlayerRadius;
+        }
+    }
+
+    float CalculateScaleMultiplier(float newValue, float previousValue)
+    {
+        float diffPercentage = (newValue * 100) / previousValue;
+        float scaleMultiplier = diffPercentage / 100;
+        return scaleMultiplier;
     }
 }

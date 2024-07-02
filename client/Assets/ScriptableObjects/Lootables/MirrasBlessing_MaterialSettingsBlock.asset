@@ -20,6 +20,8 @@ MonoBehaviour:
     value: 3
   - name: _FresnelPower
     value: 10
+  - name: _FresnelSaturation
+    value: 1
   color_values:
   - name: _FresnelColor
     value: {r: 2.594569, g: 0, b: 4.867145, a: 0}
